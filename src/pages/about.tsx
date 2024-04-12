@@ -1,20 +1,13 @@
-import Header from "@/components/header/header";
-import { NextPage } from "next";
+import Header from '@/components/header/header'
+import { NextPage } from 'next'
 
 const About: NextPage = () => {
   return (
     <>
       <Header />
       <main>
-        <h1>
-          <span>
-            Geraldo
-          </span>
-          <span>
-            Pereira
-          </span>
-        </h1>
-        <div>
+        <h1>Geraldo Pereira</h1>
+        <section>
           <p>
             Olá! Sou desenvolvedor Full-stack com mais de um ano de experiência
             em desenvolvimento web. Durante minha jornada, concluí diversos
@@ -37,7 +30,7 @@ const About: NextPage = () => {
             tecnologias como React Hook Form, Yup, React-Toastify e Context API,
             juntamente com Styled Components para a estilização responsiva.
           </p>
-        </div>
+        </section>
         <ul>
           <li>Organização</li>
           <li>Criativo</li>
@@ -46,8 +39,8 @@ const About: NextPage = () => {
         </ul>
         <picture>
           <img
-            src="https://github.com/Geraldopereirads.png"
-            alt="Desenvolvedor Full-Stack"
+            src='https://github.com/Geraldopereirads.png'
+            alt='Desenvolvedor Full-Stack'
             width={300}
             height={300}
           />
@@ -59,7 +52,7 @@ const About: NextPage = () => {
           <li>Resolução</li>
           <li>Lógica</li>
         </ul>
-        <div>
+        <section>
           <p>
             Além disso, desenvolvi uma API para uma locadora de filmes
             fictícios, utilizando tecnologias de ponta, como TypeScript, Zod,
@@ -74,10 +67,10 @@ const About: NextPage = () => {
             desenvolvimento, estou à disposição para colaborar em sua próxima
             empreitada.
           </p>
-        </div>
+        </section>
       </main>
     </>
-  );
-};
+  )
+}
 
-export default About;
+export default About

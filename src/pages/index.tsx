@@ -14,7 +14,7 @@ const Home: NextPage = () => {
             Eu sou Geraldo Pereira, Desenvolvedor Full-Stack
           </h1>
           <h2>Seja bem-vindo ao meu portólio website</h2>
-          <a href=''>Saiba mais sobre mim</a>
+          <a href='/about'>Saiba mais sobre mim</a>
         </div>
 
         <Image
