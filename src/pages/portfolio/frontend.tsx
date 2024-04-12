@@ -1,5 +1,7 @@
 import Header from "@/components/header/header";
-import { NextPage } from "next";
+import { CardsProps } from "@/interface/projects.interface";
+import { api } from "@/services/api";
+import { GetServerSideProps, NextPage } from "next";
 import Link from "next/link";
 
 const FrontEnd: NextPage = () => {
@@ -23,5 +25,14 @@ const FrontEnd: NextPage = () => {
     </>
   );
 };
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const response = await api.get<CardsProps>("/frontend");
+
+  return {
+    props: { cards: response.data },
+  };
+};
+
 
 export default FrontEnd;
