@@ -2,7 +2,7 @@ import Header from "@/components/header/header";
 import { NextPage } from "next";
 import Link from "next/link";
 
-const Portfolio: NextPage = () => {
+const BackEnd: NextPage = () => {
   return (
     <>
       <Header />
@@ -13,12 +13,14 @@ const Portfolio: NextPage = () => {
         <nav>
           <Link href="/portfolio/frontend">Front-End</Link>
           <Link href="/portfolio/backend">Back-End</Link>
-          <Link href="/portfolio/projetos">Projetos</Link>
+          <Link href="/portfolio/projects">Projetos</Link>
           <Link href="/portfolio/fullstack">Full-Stack</Link>
         </nav>
+
+        <h1>Back-End</h1>
       </main>
     </>
   );
 };
 
-export default Portfolio;
+export default BackEnd;
