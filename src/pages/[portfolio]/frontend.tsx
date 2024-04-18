@@ -1,7 +1,7 @@
 import Header from "@/components/header/header";
 import { CardsProps } from "@/interface/projects.interface";
 import { api } from "@/services/api";
-import { GetServerSideProps, GetStaticProps, NextPage } from "next";
+import { GetServerSideProps, GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import Card from "../../components/portfolioPage/cards/frontEnd.card";
 
@@ -22,13 +22,26 @@ const FrontEnd: NextPage<CardsProps> = ({ cards }: CardsProps) => {
         </nav>
 
         <h1>Front-End</h1>
+                <ul>
+          {cards.map((project) => (
+            <Card key={project.id} card={project} />
+          ))}
+        </ul>
+
       </main>
     </>
   );
 };
 
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: "blocking",
+  };
+};
+
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await api.get<CardsProps>("/projects");
+  const response = await api.get<CardsProps>("/frontend");
 
   return {
     props: { cards: response.data },
