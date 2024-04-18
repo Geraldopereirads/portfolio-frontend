@@ -5,7 +5,7 @@ import { GetServerSideProps, NextPage } from "next";
 import Link from "next/link";
 import Card from "../../components/portfolioPage/cards/fullStack.card";
 
-const FullStack: NextPage<CardsProps> = ({cards}) => {
+const FullStack: NextPage<CardsProps> = ({ cards }: CardsProps) => {
   return (
     <>
       <Header />
@@ -34,6 +34,5 @@ export const getServerSideProps: GetServerSideProps = async () => {
     props: { cards: response.data },
   };
 };
-
 
 export default FullStack;

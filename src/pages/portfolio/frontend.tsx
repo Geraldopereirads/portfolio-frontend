@@ -1,11 +1,11 @@
 import Header from "@/components/header/header";
 import { CardsProps } from "@/interface/projects.interface";
 import { api } from "@/services/api";
-import { GetServerSideProps, NextPage } from "next";
+import { GetServerSideProps, GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import Card from "../../components/portfolioPage/cards/frontEnd.card";
 
-const FrontEnd: NextPage<CardsProps> = ({cards}) => {
+const FrontEnd: NextPage<CardsProps> = ({ cards }: CardsProps) => {
   return (
     <>
       <Header />
@@ -27,13 +27,13 @@ const FrontEnd: NextPage<CardsProps> = ({cards}) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const response = await api.get<CardsProps>("/frontend");
+export const getStaticProps: GetStaticProps = async () => {
+  const response = await api.get<CardsProps>("/projects");
 
   return {
     props: { cards: response.data },
+    revalidate: 60,
   };
 };
-
 
 export default FrontEnd;

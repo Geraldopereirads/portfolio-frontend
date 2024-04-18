@@ -1,11 +1,11 @@
 import Header from "@/components/header/header";
 import { CardsProps } from "@/interface/projects.interface";
 import { api } from "@/services/api";
-import { GetServerSideProps, NextPage } from "next";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import Card from "../../components/portfolioPage/cards/projects.card";
 
-const Projects: NextPage<CardsProps> = ({cards}) => {
+const Projects: NextPage<CardsProps> = ({ cards }: CardsProps) => {
   return (
     <>
       <Header />
@@ -21,19 +21,32 @@ const Projects: NextPage<CardsProps> = ({cards}) => {
           <Link href="/portfolio/fullstack">Full-Stack</Link>
         </nav>
 
-        <h1>Projects</h1>
+        <h1>Todos os Projetos</h1>
+
+        <ul>
+          {cards.map((project) => (
+            <Card key={project.id} card={project} />
+          ))}
+        </ul>
       </main>
     </>
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: "blocking",
+  };
+};
+
+export const getStaticProps: GetStaticProps = async () => {
   const response = await api.get<CardsProps>("/projects");
 
   return {
     props: { cards: response.data },
+    revalidate: 60,
   };
 };
-
 
 export default Projects;
