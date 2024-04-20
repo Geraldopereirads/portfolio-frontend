@@ -1,7 +1,12 @@
 import Header from "@/components/header/header";
 import { CardsProps } from "@/interface/projects.interface";
 import { api } from "@/services/api";
-import { GetServerSideProps, GetStaticPaths, GetStaticProps, NextPage } from "next";
+import {
+  GetServerSideProps,
+  GetStaticPaths,
+  GetStaticProps,
+  NextPage,
+} from "next";
 import Link from "next/link";
 import Card from "../../components/portfolioPage/cards/fullStack.card";
 
@@ -21,13 +26,11 @@ const FullStack: NextPage<CardsProps> = ({ cards }: CardsProps) => {
           <Link href="/portfolio/fullstack">Full-Stack</Link>
         </nav>
 
-        <h1>Full-Stack</h1>
         <ul>
           {cards.map((project) => (
             <Card key={project.id} card={project} />
           ))}
         </ul>
-
       </main>
     </>
   );

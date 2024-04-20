@@ -25,7 +25,6 @@ const BackEnd: NextPage<CardsProps> = ({ cards }: CardsProps) => {
           <Link href="/portfolio/fullstack">Full-Stack</Link>
         </nav>
 
-        <h1>Back-End</h1>
         <ul>
           {cards.map((project) => (
             <Card key={project.id} card={project} />
