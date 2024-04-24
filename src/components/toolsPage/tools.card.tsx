@@ -4,4 +4,4 @@ const CardTools = ({ title }: ToolProps) => {
   return <li>{title.title}</li>;
 };
 
-export default CardTools
+export default CardTools;

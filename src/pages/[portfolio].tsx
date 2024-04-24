@@ -1,7 +1,7 @@
 import Header from "@/components/header/header";
 import { CardsProps } from "@/interface/projects.interface";
 import { api } from "@/services/api";
-import { GetServerSideProps, GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import Card from "../components/portfolioPage/cards/projects.card";
 import { useEffect, useState } from "react";
@@ -66,9 +66,9 @@ const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: [],
-    fallback: "blocking"
-  }
-}
+    fallback: "blocking",
+  };
+};
 
 export const getStaticProps: GetStaticProps = async () => {
   const response = await api.get<CardsProps>("/projects");
