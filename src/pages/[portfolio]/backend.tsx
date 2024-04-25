@@ -29,7 +29,7 @@ const BackEnd: NextPage<CardsProps> = ({ cards }: CardsProps) => {
         <nav>
           <Link href="/portfolio/frontend">Front-End</Link>
           <Link href="/portfolio/backend">Back-End</Link>
-          <Link href="/portfolio/projects">Projetos</Link>
+          <Link href="/portfolio/projects">Todos os Projetos</Link>
           <Link href="/portfolio/fullstack">Full-Stack</Link>
         </nav>
 

@@ -4,8 +4,21 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import Card from "../../components/portfolioPage/cards/projects.card";
 import Header from "@/components/header/header";
+import { useState } from "react";
 
 const Projects: NextPage<CardsProps> = ({ cards }: CardsProps) => {
+  const [search, setSearch] = useState("");
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value); // Atualize o estado `search` com o valor digitado pelo usuário
+  };
+
+  const searchLowerCase = search.toLowerCase();
+
+  const filterProjects = cards.filter((project) =>
+    project.title.toLowerCase().includes(searchLowerCase)
+  );
+
   return (
     <>
       <Header />
@@ -21,9 +34,18 @@ const Projects: NextPage<CardsProps> = ({ cards }: CardsProps) => {
           <Link href="/portfolio/fullstack">Full-Stack</Link>
         </nav>
 
+        <form>
+          <input
+            className="w-96 text-black"
+            type="search"
+            value={search}
+            onChange={handleSearchChange}
+            placeholder="Insira o título do projeto que você está buscando"
+          />
+        </form>
 
         <ul>
-          {cards.map((project) => (
+          {filterProjects.map((project) => (
             <Card key={project.id} card={project} />
           ))}
         </ul>

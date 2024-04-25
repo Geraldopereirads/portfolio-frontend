@@ -34,9 +34,11 @@ const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
     setSearch(e.target.value); // Atualize o estado `search` com o valor digitado pelo usuário
   };
 
-  const searchLowerCase = search.toLowerCase()
+  const searchLowerCase = search.toLowerCase();
 
-  const filterProjects = cards.filter((project) => project.title.toLowerCase().includes(searchLowerCase));
+  const filterProjects = cards.filter((project) =>
+    project.title.toLowerCase().includes(searchLowerCase)
+  );
 
   return (
     <>
@@ -48,12 +50,13 @@ const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
         <nav>
           <Link href="/portfolio/frontend">Front-End</Link>
           <Link href="/portfolio/backend">Back-End</Link>
-          <Link href="/portfolio/projetos">Projetos</Link>
+          <Link href="/portfolio/projects">Todos os Projetos</Link>
           <Link href="/portfolio/fullstack">Full-Stack</Link>
         </nav>
 
         <form>
-          <input className="w-96 text-black"
+          <input
+            className="w-96 text-black"
             type="search"
             value={search}
             onChange={handleSearchChange}
