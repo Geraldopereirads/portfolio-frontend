@@ -1,16 +1,16 @@
 import Header from "@/components/header/header";
 import { CardsProps } from "@/interface/projects.interface";
 import { api } from "@/services/api";
+import { useWindowSize } from "@react-hook/window-size";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Link from "next/link";
+import React, { useEffect, useState } from "react";
 import Card from "../components/portfolioPage/cards/projects.card";
-import { useEffect, useState } from "react";
-import { useWindowSize } from "@react-hook/window-size";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
   const [slidePerView, setSlidePerView] = useState(1);
   const [width] = useWindowSize();
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     function handleResize() {
@@ -30,6 +30,14 @@ const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
     };
   }, [width]);
 
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value); // Atualize o estado `search` com o valor digitado pelo usuário
+  };
+
+  const searchLowerCase = search.toLowerCase()
+
+  const filterProjects = cards.filter((project) => project.title.toLowerCase().includes(searchLowerCase));
+
   return (
     <>
       <Header />
@@ -44,6 +52,15 @@ const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
           <Link href="/portfolio/fullstack">Full-Stack</Link>
         </nav>
 
+        <form>
+          <input className="w-96 text-black"
+            type="search"
+            value={search}
+            onChange={handleSearchChange}
+            placeholder="Insira o título do projeto que você está buscando"
+          />
+        </form>
+
         {/* <ul>
           <Swiper loop={true} slidesPerView={slidePerView}>
             {cards.map((project) => (
@@ -54,7 +71,7 @@ const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
           </Swiper>
         </ul> */}
         <ul>
-          {cards.map((project) => (
+          {filterProjects.map((project) => (
             <Card key={project.id} card={project} />
           ))}
         </ul>

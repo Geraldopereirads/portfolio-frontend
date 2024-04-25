@@ -10,3 +10,7 @@ export interface ToolProps {
 export interface ToolsProps {
   title: ToolsData[];
 }
+
+export interface Tool {
+  title: string;
+}

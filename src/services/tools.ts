@@ -1,4 +1,6 @@
-export const toolsInUse = [
+import { ToolsData, ToolsProps } from "@/interface/tools.interface";
+
+export const toolsInUse: ToolsData[]  = [
   {
     title: "HTML",
   },
@@ -6,10 +8,10 @@ export const toolsInUse = [
     title: "CSS",
   },
   {
-    title: "Styled Components"
+    title: "Styled Components",
   },
   {
-    title: "TailWind CSS"
+    title: "TailWind CSS",
   },
   {
     title: "JavaScript",
