@@ -7,11 +7,15 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ThemeProvider from "@/components/ThemeProvider";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Component {...pageProps} />;
+      <ThemeProvider>
+        <Component {...pageProps} />;
+      </ThemeProvider>
+
       <ToastContainer
         position="top-right"
         autoClose={1000}

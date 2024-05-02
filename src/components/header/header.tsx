@@ -1,70 +1,50 @@
-import { useState } from "react"
+import { useState } from "react";
 import Link from "next/link";
-import { MdOutlineDarkMode, MdClose } from "react-icons/md";
+import { MdClose } from "react-icons/md";
 import { RiMenuAddLine } from "react-icons/ri";
 import { BsWhatsapp } from "react-icons/bs";
-import { FaFilePdf } from "react-icons/fa";
+import { BiSolidFilePdf } from "react-icons/bi";
 import { GrGithub, GrLinkedinOption } from "react-icons/gr";
+import ThemeSwitcher from "../ThemeSwither";
 
 const Header = () => {
-    const [nav, setNav] = useState(false)
+  const [nav, setNav] = useState(false);
 
-    return (
-        <header>
-            {nav ? (
-                <>
-                <button onClick={() => setNav(!nav)}>
-                    <MdClose size={30}/>
-                </button>
+  return (
+    <header>
+      {nav ? (
+        <>
+          <button onClick={() => setNav(!nav)}>
+            <MdClose size={30} />
+          </button>
 
-                <div>
-                    <nav>
-                        <Link href="/">
-                            Início
-                        </Link>
-                        <Link href="/about">
-                            Sobre
-                        </Link>
-                        <Link href="/portfolio">
-                            Portfólio
-                        </Link>
-                        <Link href="/tools">
-                            Ferramentas
-                        </Link>
-                        <Link href="/contact">
-                            Contato
-                        </Link>
-                    </nav>
-                </div>
-                </>
-            ) : (
-                <button onClick={() => setNav(!nav)}>
-                    <RiMenuAddLine size={30} />
-                </button>
-            )}
+          <div>
+            <nav>
+              <Link href="/">Início</Link>
+              <Link href="/about">Sobre</Link>
+              <Link href="/portfolio">Portfólio</Link>
+              <Link href="/tools">Ferramentas</Link>
+              <Link href="/contact">Contato</Link>
+            </nav>
+          </div>
+        </>
+      ) : (
+        <button onClick={() => setNav(!nav)}>
+          <RiMenuAddLine size={30} />
+        </button>
+      )}
 
-            <div>
-                <nav>
-                        <Link href="/">
-                            Início
-                        </Link>
-                        <Link href="/about">
-                            Sobre
-                        </Link>
-                        <Link href="/portfolio">
-                            Portfólio
-                        </Link>
-                        <Link href="/tools">
-                            Ferramentas
-                        </Link>
-                        <Link href="/contact">
-                            Contato
-                        </Link>
+      <div>
+        <nav>
+          <Link href="/">Início</Link>
+          <Link href="/about">Sobre</Link>
+          <Link href="/portfolio">Portfólio</Link>
+          <Link href="/tools">Ferramentas</Link>
+          <Link href="/contact">Contato</Link>
+        </nav>
+      </div>
 
-                </nav>
-            </div>
-
-            <section>
+      <section>
         <Link
           href="https://wa.me/5522997773136"
           title="WhatsApp"
@@ -91,15 +71,12 @@ const Header = () => {
           target="_blank"
           title="Currículo"
         >
-          <FaFilePdf size={25} />
+          <BiSolidFilePdf size={25} />
         </Link>
-        <Link href="">
-          <MdOutlineDarkMode size={25} />
-        </Link>
+        <ThemeSwitcher/>
       </section>
-
-        </header>
-    )
-}
+    </header>
+  );
+};
 
 export default Header;
