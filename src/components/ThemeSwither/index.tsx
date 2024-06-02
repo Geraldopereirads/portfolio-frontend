@@ -1,6 +1,6 @@
 "use client";
 import { useTheme } from "next-themes";
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
@@ -8,9 +8,9 @@ const ThemeSwitcher = () => {
   return (
     <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
       {theme === "dark" ? (
-        <MdOutlineLightMode size={25} />
+        <MdLightMode size={25} />
       ) : (
-        <MdOutlineDarkMode size={25} />
+        <MdDarkMode size={25} />
       )}
     </button>
   );

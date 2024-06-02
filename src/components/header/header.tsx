@@ -11,15 +11,15 @@ const Header = () => {
   const [nav, setNav] = useState(false);
 
   return (
-    <header>
+    <header className="flex flex-row items-center justify-between font-semibold sticky top-0 z-10 space h-16 bg-header">
       {nav ? (
         <>
-          <button onClick={() => setNav(!nav)}>
-            <MdClose size={30} />
+          <button onClick={() => setNav(!nav)} className="z-20 md:hidden text-textWhite">
+            <MdClose className="z-10" size={30} />
           </button>
 
-          <div>
-            <nav>
+          <div className="md:hidden fixed w-full h-full top-0 left-0 right-0 flex items-center justify-center bg-gradient-to-t from-yellow-400 to-black ease-in opacity-95 pointer-events-auto transform translate-y-0 z-10">
+            <nav className=" flex flex-col items-center justify-center gap-10 container text-xl">
               <Link href="/">Início</Link>
               <Link href="/about">Sobre</Link>
               <Link href="/portfolio">Portfólio</Link>
@@ -29,12 +29,12 @@ const Header = () => {
           </div>
         </>
       ) : (
-        <button onClick={() => setNav(!nav)}>
+        <button onClick={() => setNav(!nav)} className="md:hidden flex text-textWhite">
           <RiMenuAddLine size={30} />
         </button>
       )}
 
-      <div>
+      <div className="hidden md:block">
         <nav>
           <Link href="/">Início</Link>
           <Link href="/about">Sobre</Link>
@@ -44,7 +44,7 @@ const Header = () => {
         </nav>
       </div>
 
-      <section>
+      <section className="flex flex-row gap-4 text-textWhite">
         <Link
           href="https://wa.me/5522997773136"
           title="WhatsApp"
@@ -73,7 +73,7 @@ const Header = () => {
         >
           <BiSolidFilePdf size={25} />
         </Link>
-        <ThemeSwitcher/>
+        <ThemeSwitcher />
       </section>
     </header>
   );

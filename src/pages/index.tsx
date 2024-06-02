@@ -26,6 +26,6 @@ const Home: NextPage = () => {
         />
       </main>
     </>
-  );
-};
-export default Home;
+  )
+}
+export default Home
