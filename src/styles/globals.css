@@ -7,9 +7,22 @@
         @apply p-4 lg:pl-14 lg:pr-14 2xl:pr-20 2xl:pl-20;
     }
 
+    .flexRow {
+        @apply flex flex-row items-center justify-between
+    }
+
     .hover {
         @apply hover:text-primary transition duration-300;
     }
+
+    .iconsSize {
+        @apply text-2xl xl:text-3xl text-textWhite
+    }
+
+    .customBox {
+        box-shadow: 0px 1px 5px 4px black
+    }
+
 }
 
 main {

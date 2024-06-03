@@ -8,9 +8,9 @@ const ThemeSwitcher = () => {
   return (
     <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
       {theme === "dark" ? (
-        <MdLightMode size={25} />
+        <MdLightMode  className="iconsSize hover"/>
       ) : (
-        <MdDarkMode size={25} />
+        <MdDarkMode className="iconsSize hover"/>
       )}
     </button>
   );

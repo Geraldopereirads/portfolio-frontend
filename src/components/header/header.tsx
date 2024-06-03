@@ -11,7 +11,7 @@ const Header = () => {
   const [nav, setNav] = useState(false);
 
   return (
-    <header className="flex flex-row items-center justify-between font-semibold sticky top-0 z-10 space h-16 bg-header">
+    <header className="customBox flexRow font-semibold sticky top-0 z-10 space h-16 bg-header">
       {nav ? (
         <>
           <button onClick={() => setNav(!nav)} className="z-20 md:hidden text-textWhite">
@@ -19,7 +19,7 @@ const Header = () => {
           </button>
 
           <div className="md:hidden fixed w-full h-full top-0 left-0 right-0 flex items-center justify-center bg-gradient-to-t from-yellow-400 to-black ease-in opacity-95 pointer-events-auto transform translate-y-0 z-10">
-            <nav className=" flex flex-col items-center justify-center gap-10 container text-xl">
+            <nav className=" flex flex-col items-center justify-center gap-10 container text-xl text-textWhite">
               <Link href="/">Início</Link>
               <Link href="/about">Sobre</Link>
               <Link href="/portfolio">Portfólio</Link>
@@ -35,45 +35,46 @@ const Header = () => {
       )}
 
       <div className="hidden md:block">
-        <nav>
-          <Link href="/">Início</Link>
-          <Link href="/about">Sobre</Link>
-          <Link href="/portfolio">Portfólio</Link>
-          <Link href="/tools">Ferramentas</Link>
-          <Link href="/contact">Contato</Link>
+        <nav className="flex text-xl xl:text-2xl text-textWhite md:gap-7 lg:gap-9 xl:gap-16 ">
+          <Link href="/" className="hover">Início</Link>
+          <Link href="/about" className="hover">Sobre</Link>
+          <Link href="/portfolio" className="hover">Portfólio</Link>
+          <Link href="/tools" className="hover">Ferramentas</Link>
+          <Link href="/contact" className="hover">Contato</Link>
         </nav>
       </div>
 
-      <section className="flex flex-row gap-4 text-textWhite">
+      <section className="flex flex-row gap-4 lg:gap-5 2xl:gap-8">
         <Link
           href="https://wa.me/5522997773136"
           title="WhatsApp"
           target="_blank"
         >
-          <BsWhatsapp size={25} />
+          <BsWhatsapp className="iconsSize hover"/>
         </Link>
         <Link
           href="https://github.com/Geraldopereirads"
           title="GitHub"
           target="_blank"
         >
-          <GrGithub size={25} />
+          <GrGithub className="iconsSize hover" />
         </Link>
         <Link
           href="https://www.linkedin.com/in/geraldo-pereira/"
           title="LinkeDin"
           target="_blank"
         >
-          <GrLinkedinOption size={25} />
+          <GrLinkedinOption className="iconsSize hover" />
         </Link>
         <Link
           href="https://docs.google.com/document/d/1RuY9K2i9rQIZCorUadjX_VIELbHQhU19/edit"
           target="_blank"
           title="Currículo"
         >
-          <BiSolidFilePdf size={25} />
+          <BiSolidFilePdf className="iconsSize hover" />
         </Link>
-        <ThemeSwitcher />
+        <ThemeSwitcher/>
+
       </section>
     </header>
   );
