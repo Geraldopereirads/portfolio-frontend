@@ -14,7 +14,10 @@ const Header = () => {
     <header className="customBox flexRow font-semibold sticky top-0 z-10 space h-16 bg-header">
       {nav ? (
         <>
-          <button onClick={() => setNav(!nav)} className="z-20 md:hidden text-textWhite">
+          <button
+            onClick={() => setNav(!nav)}
+            className="z-20 md:hidden text-textWhite"
+          >
             <MdClose className="z-10" size={30} />
           </button>
 
@@ -29,18 +32,31 @@ const Header = () => {
           </div>
         </>
       ) : (
-        <button onClick={() => setNav(!nav)} className="md:hidden flex text-textWhite">
+        <button
+          onClick={() => setNav(!nav)}
+          className="md:hidden flex text-textWhite"
+        >
           <RiMenuAddLine size={30} />
         </button>
       )}
 
       <div className="hidden md:block">
         <nav className="flex text-xl xl:text-2xl text-textWhite md:gap-7 lg:gap-9 xl:gap-16 ">
-          <Link href="/" className="hover">Início</Link>
-          <Link href="/about" className="hover">Sobre</Link>
-          <Link href="/portfolio" className="hover">Portfólio</Link>
-          <Link href="/tools" className="hover">Ferramentas</Link>
-          <Link href="/contact" className="hover">Contato</Link>
+          <Link href="/" className="hover">
+            Início
+          </Link>
+          <Link href="/about" className="hover">
+            Sobre
+          </Link>
+          <Link href="/portfolio" className="hover">
+            Portfólio
+          </Link>
+          <Link href="/tools" className="hover">
+            Ferramentas
+          </Link>
+          <Link href="/contact" className="hover">
+            Contato
+          </Link>
         </nav>
       </div>
 
@@ -50,7 +66,7 @@ const Header = () => {
           title="WhatsApp"
           target="_blank"
         >
-          <BsWhatsapp className="iconsSize hover"/>
+          <BsWhatsapp className="iconsSize hover" />
         </Link>
         <Link
           href="https://github.com/Geraldopereirads"
@@ -73,8 +89,7 @@ const Header = () => {
         >
           <BiSolidFilePdf className="iconsSize hover" />
         </Link>
-        <ThemeSwitcher/>
-
+        <ThemeSwitcher />
       </section>
     </header>
   );

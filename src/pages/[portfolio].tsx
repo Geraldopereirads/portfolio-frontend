@@ -31,7 +31,7 @@ const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
   }, [width]);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearch(e.target.value); // Atualize o estado `search` com o valor digitado pelo usuário
+    setSearch(e.target.value)
   };
 
   const searchLowerCase = search.toLowerCase();

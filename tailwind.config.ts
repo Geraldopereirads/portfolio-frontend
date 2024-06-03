@@ -12,7 +12,22 @@ const config: Config = {
       colors: {
         primary: "#D6CD2A",
         header: "#1B1B1B",
-        textWhite: '#DAD7CE',
+        textWhite: "#DAD7CE",
+        textD: "#1B1B1B",
+      },
+      screens: {
+        "p": "500px",
+        "pp": "600px",
+      },
+      maxWidth: {
+        "51": "51%",
+        "32": "32%",
+        "38": "38%",
+        "36": "36rem",
+        "25": "25%",
+      },
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
       },
     },
   },

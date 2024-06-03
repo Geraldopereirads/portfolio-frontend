@@ -10,5 +10,5 @@ export default function Document({ children }: { children: React.ReactNode }) {
         <NextScript />
       </body>
     </Html>
-  );
+  )
 }
