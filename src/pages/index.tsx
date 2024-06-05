@@ -8,9 +8,9 @@ const Home: NextPage = () => {
   return (
     <>
       <Header />
-      <main className="space flex flex-col items-center justify-evenly text sm:flexRow sm:gap-12">
+      <main className="flex flex-col items-center justify-evenly text sm:flexRow sm:gap-12">
         <div className="flex flex-col gap-3">
-          <h1 className="text text-3xl leading-[137%] max-w-51 p:text-4xl p:leading-[137%] p:max-w-38 pp:max-w-[73%] sm:text-5xl lg:max-w-[40%] xl:text-5xl xl:max-w-[32%] 2xl:max-w-[25%] 2xl:leading-[120%]">
+          <h1 className="text text-3xl leading-[137%] max-w-51 p:text-4xl p:leading-[114%] p:max-w-38 pp:max-w-[73%] lg:leading-[100%] sm:text-[2.063rem] lg:max-w-[60%] lg:text-5xl xl:text-5xl xl:max-w-[70%] 2xl:max-w-[25%] 2xl:leading-[120%]">
             <small className="textSmall">Olá</small> <br />
             Eu sou Geraldo Pereira, Desenvolvedor Full-Stack
           </h1>
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
           alt="Desenvolvedor Full-Stack"
           width={300}
           height={200}
-          className="p:w-80 md:w-96 xl:w-[36rem] 2xl:w-[470px]"
+          className="p:w-80 xl:w-[36rem] lg:w-[22rem] 2xl:w-[470px] "
         />
       </main>
     </>

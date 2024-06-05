@@ -11,6 +11,10 @@
         @apply flex flex-row items-center justify-between;
     }
 
+    .flexCol {
+        @apply flex justify-center items-center flex-col
+    }
+
     .hover {
         @apply hover:text-primary transition duration-300;
     }
@@ -35,6 +39,10 @@
         box-shadow: 0px 1px 5px 4px black;
     }
 
+    .primaryTitle {
+        @apply bg-primary h-16 rounded-lg text-textD p-5 text-[2rem] font-bold flex justify-center items-center
+    }
+
     @layer base {
         ::-webkit-scrollbar {
             display: none;
@@ -43,7 +51,7 @@
 }
 
 main {
-    @apply bg-[url('../assets/img/background/backgroundLightDesenvolvedorFrontEnd.svg')] text-textD dark:bg-[url('../assets/img/background/backgroundDarkDesenvolvedorFrontEnd.svg')] min-h-screen dark:text-textWhite transition-colors duration-100;
+    @apply bg-[url('../assets/img/background/backgroundLightDesenvolvedorFrontEnd.svg')] text-textD dark:bg-[url('../assets/img/background/backgroundDarkDesenvolvedorFrontEnd.svg')] min-h-screen dark:text-textWhite transition-colors duration-100 space;
 }
 
 main * {

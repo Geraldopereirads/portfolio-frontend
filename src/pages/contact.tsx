@@ -51,8 +51,8 @@ const Contact: NextPage = () => {
   return (
     <>
       <Header />
-      <main>
-        <h1>Contato</h1>
+      <main className="flexCol">
+        <h1 className="primaryTitle">Contato</h1>
         <p>
           Desperte sua próxima ideia incrivel e transforme projetos em
           realidade!

@@ -1,37 +1,25 @@
-import Header from '@/components/header/header'
-import { NextPage } from 'next'
+import Header from "@/components/header/header";
+import { NextPage } from "next";
 
 const About: NextPage = () => {
   return (
     <>
       <Header />
-      <main>
-        <h1>Geraldo Pereira</h1>
+      <main className="flexCol">
+        <h1 className="primaryTitle">Geraldo Pereira</h1>
         <section>
           <p>
-            Olá! Sou desenvolvedor Full-stack com mais de um ano de experiência
-            em desenvolvimento web. Durante minha jornada, concluí diversos
-            projetos significativos que demonstram minhas habilidades e
-            expertise na área.
-          </p>
-          <p>
-            Um desses projetos é uma aplicação para uma hamburgueria fictícia,
-            construída utilizando React. Essa aplicação se destaca por sua
-            integração com uma API para obtenção de produtos, funcionalidades
-            avançadas como adicionar produtos ao carrinho e exibição do valor
-            total da compra. Além disso, a estilização é responsiva, seguindo as
-            melhores práticas de mobile first.
-          </p>
-          <p>
-            Outro projeto relevante é uma aplicação de listagem de tecnologias
-            desenvolvida em React e TypeScript. Essa aplicação inclui recursos
-            como cadastro e login de usuários, além da capacidade de cadastrar e
-            remover tecnologias. Para garantir a qualidade e segurança, utilizei
-            tecnologias como React Hook Form, Yup, React-Toastify e Context API,
-            juntamente com Styled Components para a estilização responsiva.
+            Desenvolvedor Full Stack Jr. com sólida formação em Desenvolvimento
+            Web Full Stack pela Kenzie Academy Brasil e graduação em andamento
+            em Engenharia de Software. Possuo conhecimento abrangente em
+            desenvolvimento Front End e Back End, com foco na criação de
+            aplicações web eficientes e responsivas. Comprometido com o
+            aprendizado contínuo e a aplicação das melhores práticas de
+            programação, viso sempre a entrega de soluções de alta qualidade.
+            Inglês intermediário.
           </p>
         </section>
-        <ul>
+        <ul className="flex flex-row">
           <li>Organização</li>
           <li>Criativo</li>
           <li>Comunicação</li>
@@ -39,14 +27,15 @@ const About: NextPage = () => {
         </ul>
         <picture>
           <img
-            src='https://github.com/Geraldopereirads.png'
-            alt='Desenvolvedor Full-Stack'
-            width={300}
-            height={300}
+            src="https://github.com/Geraldopereirads.png"
+            alt="Desenvolvedor Full-Stack"
+            width={200}
+            height={200}
+            className="rounded-full"
           />
         </picture>
 
-        <ul>
+        <ul className="flex flex-row">
           <li>Adaptabilidade</li>
           <li>Curioso</li>
           <li>Resolução</li>
@@ -54,23 +43,20 @@ const About: NextPage = () => {
         </ul>
         <section>
           <p>
-            Além disso, desenvolvi uma API para uma locadora de filmes
-            fictícios, utilizando tecnologias de ponta, como TypeScript, Zod,
-            PostgreSQL, TypeORM, PG e PG-Format. Essa API permite realizar
-            operações de CRUD completo de filmes, demonstrando minha competência
-            na construção de sistemas robustos e escaláveis.
-          </p>
-          <p>
-            Estou sempre em busca de novos desafios e estou animado para
-            continuar contribuindo com meus conhecimentos e habilidades em
-            projetos futuros. Se você busca um profissional com paixão pelo
-            desenvolvimento, estou à disposição para colaborar em sua próxima
-            empreitada.
+            Experiência sólida na construção de projetos utilizando stacks como
+            HTML, CSS, JavaScript ES6, React, TypeScript, Node.js, Python e
+            Next.js. Desenvolvo aplicações por meio de metodologias ágeis
+            (SCRUM), utilizando ferramentas como Trello e Notion, e Git para
+            versionamento. Possuo experiência na construção de APIs utilizando
+            frameworks como Express.js, Prisma, TypeORM e NestJS, além de
+            conhecimentos sólidos em SQL (PostgreSQL). Atualmente, busco
+            aprimorar continuamente minhas habilidades técnicas, com foco no
+            estudo aprofundado de Java.{" "}
           </p>
         </section>
       </main>
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;
