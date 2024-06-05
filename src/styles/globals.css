@@ -40,13 +40,19 @@
     }
 
     .primaryTitle {
-        @apply bg-primary h-16 rounded-lg text-textD p-5 text-[2rem] font-bold flex justify-center items-center
+        @apply bg-gradient-to-t from-yellow-400 to-textD mt-20 h-16 rounded-lg text-textD p-5 text-[2rem] font-bold flex justify-center items-center
+    }
+
+    .paragraph {
+        @apply font-medium sm:text-lg lg:text-lg
     }
 
     @layer base {
         ::-webkit-scrollbar {
             display: none;
         }
+
+
     }
 }
 
