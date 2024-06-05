@@ -3,6 +3,11 @@ import { NextPage } from "next";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
+import ThemeSwitcher from "@/components/ThemeSwither";
+import Link from "next/link";
+import { BiSolidFilePdf } from "react-icons/bi";
+import { BsWhatsapp } from "react-icons/bs";
+import { GrGithub, GrLinkedinOption } from "react-icons/gr";
 
 const Contact: NextPage = () => {
   const [name, setName] = useState("");
@@ -76,8 +81,38 @@ const Contact: NextPage = () => {
             onChange={(e) => setMessage(e.target.value)}
             value={message}
           ></textarea>
-          <input type="submit" value="Enviar" className="cursor-pointer"/>
+          <input type="submit" value="Enviar" className="cursor-pointer" />
         </form>
+        <section className="flex flex-row gap-4 lg:gap-5 2xl:gap-8">
+          <Link
+            href="https://wa.me/5522997773136"
+            title="WhatsApp"
+            target="_blank"
+          >
+            <BsWhatsapp className="iconsSize text-textD dark:text-textWhite" />
+          </Link>
+          <Link
+            href="https://github.com/Geraldopereirads"
+            title="GitHub"
+            target="_blank"
+          >
+            <GrGithub className="iconsSize text-textD dark:text-textWhite" />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/geraldo-pereira/"
+            title="LinkeDin"
+            target="_blank"
+          >
+            <GrLinkedinOption className="iconsSize text-textD dark:text-textWhite" />
+          </Link>
+          <Link
+            href="https://docs.google.com/document/d/18fuUqM4vwsqAulXEXX8KmdRBKsyfy-m2SUco9UH9l7I/edit?usp=sharing"
+            target="_blank"
+            title="Currículo"
+          >
+            <BiSolidFilePdf className="iconsSize text-textD dark:text-textWhite" />
+          </Link>
+        </section>
       </main>
     </>
   );

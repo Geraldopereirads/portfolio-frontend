@@ -7,10 +7,6 @@
         @apply p-4 lg:pl-14 lg:pr-14 2xl:pr-20 2xl:pl-20;
     }
 
-    .lineHeight {
-        @apply leading-[150%]
-    }
-
     .flexRow {
         @apply flex flex-row items-center justify-between;
     }

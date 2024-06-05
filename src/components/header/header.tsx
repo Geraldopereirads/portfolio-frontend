@@ -11,7 +11,7 @@ const Header = () => {
   const [nav, setNav] = useState(false);
 
   return (
-    <header className="customBox flexRow font-semibold sticky top-0 z-10 space h-16 bg-header">
+    <header className="customBox flexRow font-semibold sticky top-0 z-10 space h-[75px] bg-header">
       {nav ? (
         <>
           <button
@@ -83,7 +83,7 @@ const Header = () => {
           <GrLinkedinOption className="iconsSize hover" />
         </Link>
         <Link
-          href="https://docs.google.com/document/d/1RuY9K2i9rQIZCorUadjX_VIELbHQhU19/edit"
+          href="https://docs.google.com/document/d/18fuUqM4vwsqAulXEXX8KmdRBKsyfy-m2SUco9UH9l7I/edit?usp=sharing"
           target="_blank"
           title="Currículo"
         >

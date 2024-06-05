@@ -31,7 +31,7 @@ const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
   }, [width]);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearch(e.target.value)
+    setSearch(e.target.value);
   };
 
   const searchLowerCase = search.toLowerCase();
@@ -95,7 +95,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: { cards: response.data },
-    revalidate: 60,
+    revalidate: 60 * 5,
   };
 };
 
