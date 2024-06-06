@@ -44,9 +44,7 @@ const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
     <>
       <Header />
       <main>
-        <Link href="/portfolio">
           <h1>Portfólo</h1>
-        </Link>
         <nav>
           <Link href="/portfolio/frontend">Front-End</Link>
           <Link href="/portfolio/backend">Back-End</Link>
