@@ -60,13 +60,13 @@ const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
           </Link>
         </nav>
 
-        <form>
+        <form className="">
           <input
-            className="w-96 text-black"
+            className="text-black h-11 bg-textD rounded-lg pl-5 w-[100%] mb-12"
             type="search"
             value={search}
             onChange={handleSearchChange}
-            placeholder="Insira o título do projeto que você está buscando"
+            placeholder="Insira o título"
           />
         </form>
 
