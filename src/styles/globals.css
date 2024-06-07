@@ -47,6 +47,10 @@
         @apply font-medium sm:text-lg lg:text-lg
     }
 
+    .buttonsPortfolio {
+        @apply bg-gradient-to-t from-yellow-400 to-textD text-textD p-2 rounded-lg
+    }
+
     @layer base {
         ::-webkit-scrollbar {
             display: none;

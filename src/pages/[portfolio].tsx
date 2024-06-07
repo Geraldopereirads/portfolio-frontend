@@ -43,13 +43,21 @@ const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
   return (
     <>
       <Header />
-      <main>
-          <h1>Portfólo</h1>
-        <nav>
-          <Link href="/portfolio/frontend">Front-End</Link>
-          <Link href="/portfolio/backend">Back-End</Link>
-          <Link href="/portfolio/projects">Todos os Projetos</Link>
-          <Link href="/portfolio/fullstack">Full-Stack</Link>
+      <main className="flexCol">
+        <h1 className="primaryTitle">Portfólo</h1>
+        <nav className="mt-20 mb-20 flex flex-row flex-wrap items-center justify-center gap-5 ">
+          <Link className="buttonsPortfolio" href="/portfolio/frontend">
+            Front-End
+          </Link>
+          <Link className="buttonsPortfolio" href="/portfolio/backend">
+            Back-End
+          </Link>
+          <Link className="buttonsPortfolio" href="/portfolio/projects">
+            Todos os Projetos
+          </Link>
+          <Link className="buttonsPortfolio" href="/portfolio/fullstack">
+            Full-Stack
+          </Link>
         </nav>
 
         <form>
@@ -93,7 +101,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: { cards: response.data },
-    revalidate: 60 * 5,
+    revalidate: 60,
   };
 };
 
