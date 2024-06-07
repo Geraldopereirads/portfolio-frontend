@@ -24,7 +24,7 @@
     }
 
     .text {
-        @apply font-semibold;
+        @apply text-textD font-semibold dark:text-textWhite;
     }
 
     .textDark {
@@ -48,7 +48,7 @@
     }
 
     .buttonsPortfolio {
-        @apply bg-gradient-to-t from-yellow-400 to-textD text-textD p-2 rounded-lg
+        @apply bg-gradient-to-t from-yellow-400 to-textD text-textD p-2 rounded-lg font-medium
     }
 
     @layer base {
@@ -61,7 +61,7 @@
 }
 
 main {
-    @apply bg-[url('../assets/img/background/backgroundLightDesenvolvedorFrontEnd.svg')] text-textD dark:bg-[url('../assets/img/background/backgroundDarkDesenvolvedorFrontEnd.svg')] min-h-screen dark:text-textWhite transition-colors duration-100 space;
+    @apply bg-[url('../assets/img/background/backgroundLightDesenvolvedorFrontEnd.svg')] min-w-[100vw] min-h-[100vh] text-textD dark:bg-[url('../assets/img/background/backgroundDarkDesenvolvedorFrontEnd.svg')] dark:min-h-[100vh] dark:min-w-[100vw] dark:text-textWhite transition-colors duration-100 space;
 }
 
 main * {

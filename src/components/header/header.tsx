@@ -25,7 +25,7 @@ const Header = () => {
             <nav className=" flex flex-col items-center justify-center gap-10 container text-xl text-textWhite">
               <Link href="/">Início</Link>
               <Link href="/about">Sobre</Link>
-              <Link href="/portfolio/projects">Portfólio</Link>
+              <Link href="/portfolio">Portfólio</Link>
               <Link href="/tools">Ferramentas</Link>
               <Link href="/contact">Contato</Link>
             </nav>

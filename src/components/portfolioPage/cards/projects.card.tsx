@@ -5,19 +5,11 @@ import { FaGithub, FaLink } from "react-icons/fa";
 
 const Card = ({ card }: CardProps) => {
   return (
-    <li>
-      <Link href={card.url} target="_blank">
+    <li className=" flex flex-col justify-center items-center gap-2">
+      <Link className="text text-2xl" href={card.url} target="_blank">
         {card.title}
       </Link>
-      <Link href={card.url} target="_blank">
-        <Image
-          width={300}
-          height={300}
-          src={card.image}
-          alt="Capa do projeto frontend"
-        />
-      </Link>
-      <div>
+      <div className="flex justify-center items-center gap-5">
         <Link href={card.github} target="_blank">
           <FaGithub size={25} />
         </Link>
@@ -25,6 +17,16 @@ const Card = ({ card }: CardProps) => {
           <FaLink size={25} />
         </Link>
       </div>
+
+      <Link href={card.url} target="_blank">
+        <Image
+          width={300}
+          height={300}
+          src={card.image}
+          alt="Capa do projeto frontend"
+          className="w-[100%]"
+        />
+      </Link>
     </li>
   );
 };

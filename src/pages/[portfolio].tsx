@@ -5,6 +5,7 @@ import { useWindowSize } from "@react-hook/window-size";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Card from "../components/portfolioPage/cards/projects.card";
 
 const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
@@ -44,7 +45,10 @@ const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
     <>
       <Header />
       <main className="flexCol">
-        <h1 className="primaryTitle">Portfólo</h1>
+        <Link href="/portfolio">
+          <h1 className="primaryTitle">Portfólo</h1>
+        </Link>
+
         <nav className="mt-20 mb-20 flex flex-row flex-wrap items-center justify-center gap-5 ">
           <Link className="buttonsPortfolio" href="/portfolio/frontend">
             Front-End
@@ -62,24 +66,29 @@ const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
 
         <form className="">
           <input
-            className="text-black h-11 bg-textD rounded-lg pl-5 w-[100%] mb-12"
+            className="h-11 bg-textD rounded-lg pl-5 w-[100%] mb-12 text-textWhite"
             type="search"
             value={search}
             onChange={handleSearchChange}
-            placeholder="Insira o título"
+            placeholder="Insira o título do projeto"
           />
         </form>
-
-        {/* <ul>
-          <Swiper loop={true} slidesPerView={slidePerView}>
-            {cards.map((project) => (
+        <ul className="max-w-[100%] md:hidden">
+          <Swiper
+            slidesPerView={slidePerView}
+            pagination={{ clickable: true }}
+            navigation
+            loop={true}
+          >
+            {filterProjects.map((project) => (
               <SwiperSlide key={project.id}>
                 <Card card={project} />
               </SwiperSlide>
             ))}
           </Swiper>
-        </ul> */}
-        <ul>
+        </ul>
+
+        <ul className="space mb-16 hidden md:grid gap-10 grid-cols-2 xl:grid-cols-3 xl: 2xl:grid-cols-4 2xl:gap-28 sm:hidden">
           {filterProjects.map((project) => (
             <Card key={project.id} card={project} />
           ))}
