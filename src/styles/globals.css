@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @layer components {
     .space {
         @apply p-4 lg:pl-14 lg:pr-14 2xl:pr-20 2xl:pl-20;
@@ -12,7 +14,7 @@
     }
 
     .flexCol {
-        @apply flex justify-center items-center flex-col
+        @apply flex items-center flex-col mt-20
     }
 
     .hover {
@@ -40,7 +42,7 @@
     }
 
     .primaryTitle {
-        @apply bg-gradient-to-t from-yellow-400 to-textD mt-20 h-16 rounded-lg text-textD p-5 text-[2rem] font-bold flex justify-center items-center
+        @apply bg-gradient-to-t from-yellow-400 to-textD h-16 rounded-lg text-textD p-5 text-[2rem] font-bold flex justify-center items-center
     }
 
     .paragraph {
@@ -51,6 +53,14 @@
         @apply bg-gradient-to-t from-yellow-400 to-textD text-textD p-2 rounded-lg font-medium
     }
 
+    .tools {
+        @apply bg-textD text-textWhite p-2 flex items-center justify-center font-bold rounded w-32 h-10 relative
+    }
+
+    .flexTools {
+        @apply flex flex-wrap justify-center items-center gap-3 pt-5 lg:max-w-[80%] xl:max-w-[50%]
+    }
+
     @layer base {
         ::-webkit-scrollbar {
             display: none;
@@ -58,6 +68,10 @@
 
 
     }
+}
+
+html {
+    font-family: var(--font-roboto);
 }
 
 main {

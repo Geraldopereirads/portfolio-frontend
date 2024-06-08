@@ -1,35 +1,40 @@
 import Header from "@/components/header/header";
 import StudyngToolsCard from "@/components/toolsPage/studyngToolsCard";
 import CardTools from "@/components/toolsPage/tools.card";
+import { ToolsData } from "@/interface/tools.interface";
 import { studyingTools, toolsInUse } from "@/services/tools";
 import { NextPage } from "next";
 
-const Tools: NextPage = () => {
+const Tools: NextPage<ToolsData[]> = () => {
   return (
     <>
       <Header />
-      <main>
-        <h1>Ferramentas</h1>
+      <main className="flexCol">
+        <h1 className="primaryTitle">Ferramentas</h1>
 
-        <div>
-          <h2>Tecnologias</h2>
-          <small>Atualmente Desenvolvendo</small>
+        <div className="flex flex-col items-center justify-center pt-8">
+          <h2 className="text-4xl font-semibold">Tecnologias</h2>
+          <small className="text-base font-semibold pt-2">
+            Atualmente Desenvolvendo
+          </small>
         </div>
 
-        <ul>
-          {toolsInUse.map((title, index) => (
-            <CardTools key={index} title={title} />
+        <ul className="flexTools">
+          {toolsInUse.map((tool) => (
+            <CardTools key={tool.id} {...tool} />
           ))}
         </ul>
 
-        <div>
-          <h2>Tecnologias</h2>
-          <small>Atualmente Estudando</small>
+        <div className="flex flex-col items-center justify-center pt-8">
+          <h2 className="text-4xl font-semibold">Tecnologias</h2>
+          <small className="text-base font-semibold pt-2">
+            Atualmente Estudando
+          </small>
         </div>
 
-        <ul>
-          {studyingTools.map((title, index) => (
-            <StudyngToolsCard key={index} title={title} />
+        <ul className="flexTools">
+          {studyingTools.map((tool) => (
+            <StudyngToolsCard key={tool.id} {...tool} />
           ))}
         </ul>
       </main>

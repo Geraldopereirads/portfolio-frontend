@@ -1,64 +1,109 @@
-import { ToolsData, ToolsProps } from "@/interface/tools.interface";
+import { ToolsData } from "@/interface/tools.interface";
+import { FaHtml5, FaCss3Alt } from "react-icons/fa";
+import {
+  SiReact,
+  SiStyledcomponents,
+  SiTailwindcss,
+  SiJavascript,
+  SiTypescript,
+} from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { TbSql } from "react-icons/tb";
+import { IoLogoNodejs } from "react-icons/io5";
+import { SiPrisma, SiDjango } from "react-icons/si";
+import { LiaJava } from "react-icons/lia";
+import { FaPython } from "react-icons/fa6";
 
-export const toolsInUse: ToolsData[]  = [
+
+
+export const toolsInUse: ToolsData[] = [
   {
-    title: "HTML",
+    id: 1,
+    img: FaHtml5,
+    tool: "HTML",
   },
   {
-    title: "CSS",
+    id: 2,
+    img: FaCss3Alt,
+    tool: "CSS",
   },
   {
-    title: "Styled Components",
+    id: 5,
+    img: SiJavascript,
+    tool: "JavaScript",
   },
   {
-    title: "TailWind CSS",
+    id: 6,
+    img: SiTypescript,
+    tool: "TypeScript",
   },
   {
-    title: "JavaScript",
+    id: 7,
+    img: SiReact,
+    tool: "ReactJS",
   },
   {
-    title: "TypeScript",
+    id: 8,
+    img: TbBrandNextjs,
+    tool: "NextJS",
   },
   {
-    title: "ReactJS",
+    id: 9,
+    img: TbSql,
+    tool: "SQL",
   },
   {
-    title: "NextJS",
+    id: 10,
+    img: BiLogoPostgresql,
+    tool: "PostgreSQL",
   },
   {
-    title: "SQL",
+    id: 11,
+    img: IoLogoNodejs,
+    tool: "NodeJS",
   },
   {
-    title: "PostgreSQL",
+    id: 12,
+    img: SiTypescript,
+    tool: "ExpressJS",
   },
   {
-    title: "NodeJS",
+    id: 13,
+    img: SiTypescript,
+    tool: "NestJS",
   },
   {
-    title: "ExpressJS",
+    id: 14,
+    img: SiTypescript,
+    tool: "TypeORM",
   },
   {
-    title: "NestJS",
-  },
-  {
-    title: "TypeORM",
-  },
-  {
-    title: "Prisma",
+    id: 15,
+    img: SiPrisma,
+    tool: "Prisma",
   },
 ];
 
 export const studyingTools = [
   {
-    title: "Java",
+    id: 1,
+    img: LiaJava,
+    tool: "Java",
   },
   {
-    title: "Spring Boot",
+    id: 2,
+    img:LiaJava,
+    tool: "Spring Boot",
   },
   {
-    title: "Python",
+    id: 3,
+    img:FaPython,
+    tool: "Python",
   },
   {
-    title: "Django",
+    id: 4,
+    img:SiDjango,
+    tool: "Django",
   },
 ];

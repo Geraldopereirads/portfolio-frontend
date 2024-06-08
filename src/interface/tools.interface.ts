@@ -1,16 +1,10 @@
-import { z } from "zod";
-import { ToolsSchema } from "./../schemas/tools.schema";
+import React from "react";
+import { IconType } from "react-icons";
 
-export type ToolsData = z.infer<typeof ToolsSchema>;
 
-export interface ToolProps {
-  title: ToolsData;
+export interface ToolsData {
+  id: number
+  img: IconType;
+  tool: string;
 }
 
-export interface ToolsProps {
-  title: ToolsData[];
-}
-
-export interface Tool {
-  title: string;
-}

@@ -1,10 +1,11 @@
-import { ToolProps } from "@/interface/tools.interface";
+import { ToolsData } from "@/interface/tools.interface";
 import Image from "next/image";
 
-const CardTools = ({ title }: ToolProps) => {
+const CardTools = ({img: Icon, tool }: ToolsData) => {
   return (
-    <li>
-      <span>{title.title}</span>
+    <li className="tools">
+      <Icon className="absolute top-3 left-2 right-0 text-primary text-lg"/>
+      <span className="ml-5">{tool}</span>
     </li>
   );
 };
