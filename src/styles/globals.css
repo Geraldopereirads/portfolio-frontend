@@ -14,7 +14,7 @@
     }
 
     .flexCol {
-        @apply flex items-center flex-col mt-20
+        @apply flex items-center flex-col pt-20
     }
 
     .hover {
