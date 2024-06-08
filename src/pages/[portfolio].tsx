@@ -64,7 +64,7 @@ const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
           </Link>
         </nav>
 
-        <form className="">
+        <form>
           <input
             className="h-11 bg-textD rounded-lg pl-5 w-[100%] mb-12 text-textWhite"
             type="search"
