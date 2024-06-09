@@ -37,15 +37,11 @@ const Tools: NextPage<ToolsData[]> = () => {
             <StudyngToolsCard key={tool.id} {...tool} />
           ))}
         </ul>
-      </main>
 
-      <div>
-        <p>
-          “Aprender é a unica coisa que a mente não se cansa, nunca tem medo e
-          nunca se arrepende”
-        </p>
-        <span>~Leonardo da Vinci</span>
-      </div>
+        <span className="tools w-[300px] mt-7">
+          Bacharelado em Engenharia de Software
+        </span>
+      </main>
     </>
   );
 };

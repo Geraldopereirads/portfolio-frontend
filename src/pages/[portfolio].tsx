@@ -13,6 +13,7 @@ const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
   const [width] = useWindowSize();
   const [search, setSearch] = useState("");
 
+
   useEffect(() => {
     function handleResize() {
       if (width < 600) {
@@ -66,18 +67,17 @@ const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
 
         <form>
           <input
-            className="h-11 bg-textD rounded-lg pl-5 w-[100%] mb-12 text-textWhite"
+            className="h-11 bg-textD rounded-lg pl-5 w-[100%] mb-12 text-textWhite p:w-[437px]"
             type="search"
             value={search}
             onChange={handleSearchChange}
             placeholder="Insira o título do projeto"
           />
         </form>
-        <ul className="max-w-[100%] md:hidden">
+        <ul className="max-w-[100%] md:hidden ">
           <Swiper
             slidesPerView={slidePerView}
             pagination={{ clickable: true }}
-            navigation
             loop={true}
           >
             {filterProjects.map((project) => (

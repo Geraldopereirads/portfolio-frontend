@@ -5,6 +5,7 @@
 
 
 @layer components {
+
     .space {
         @apply p-4 lg:pl-14 lg:pr-14 2xl:pr-20 2xl:pl-20;
     }
