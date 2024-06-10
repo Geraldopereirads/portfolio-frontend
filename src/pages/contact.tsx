@@ -53,29 +53,32 @@ const Contact: NextPage = () => {
       <Header />
       <main className="flexCol">
         <h1 className="primaryTitle">Contato</h1>
-        <h2 className="w-[72%] pt-8
+        <h2 className="w-[72%] pt-20
          flex justify-center items-center font-semibold text-base minOne:w-[53%] p:w-[50%] p:text-lg pp:w-[100%] md:text-2xl lg:text-[29px]">
           Desperte sua próxima ideia incrivel e transforme projetos em
           realidade!
         </h2>
-        <form onSubmit={sendEmail}>
+        <form onSubmit={sendEmail} className="flexCol justify-center gap-5 w-[100%]">
           <input
             type="text"
             placeholder="Digite seu nome"
             onChange={(e) => setName(e.target.value)}
             value={name}
+            className="ContactInputs"
           />
           <input
             type="text"
             placeholder="Digite seu WhatsApp"
             onChange={(e) => setWhatsapp(e.target.value)}
             value={whatsapp}
+            className="ContactInputs"
           />
           <input
             type="text"
             placeholder="Digite seu E-mail"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
+            className="ContactInputs"
           />
           <textarea
             placeholder="Digite sua mensagem..."

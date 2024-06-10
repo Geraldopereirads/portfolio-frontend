@@ -62,6 +62,10 @@
         @apply flex flex-wrap justify-center items-center gap-3 pt-5 lg:max-w-[80%] xl:max-w-[50%]
     }
 
+    .ContactInputs {
+        @apply w-[100%] rounded h-10 pl-3
+    }
+
     @layer base {
         ::-webkit-scrollbar {
             display: none;
