@@ -47,7 +47,7 @@
     }
 
     .paragraph {
-        @apply w-full font-medium sm:text-lg lg:text-3xl
+        @apply w-full font-medium sm:text-xl lg:text-3xl
     }
 
     .buttonsPortfolio {

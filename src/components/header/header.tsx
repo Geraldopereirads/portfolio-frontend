@@ -41,7 +41,7 @@ const Header = () => {
       )}
 
       <div className="hidden md:block">
-        <nav className="flex text-xl xl:text-2xl text-textWhite md:gap-7 lg:gap-9 xl:gap-16 ">
+        <nav className="text-textWhite flex text-xl md:gap-7 lg:gap-9 lg:text-2xl xl:gap-16 2xl:text-3xl">
           <Link href="/" className="hover">
             Início
           </Link>
