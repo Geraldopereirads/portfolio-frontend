@@ -106,12 +106,19 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await api.get<CardsProps>("/projects");
-
-  return {
-    props: { cards: response.data },
-    revalidate: 60 * 15,
-  };
+  try {
+    const response = await api.get<CardsProps>("/projects");
+    return {
+      props: { cards: response.data },
+      revalidate: 60 * 15, // 15 minutos
+    };
+  } catch (error) {
+    console.error("Failed to fetch projects:", error);
+    return {
+      props: { cards: [] },
+      revalidate: 60 * 15, // 15 minutos
+    };
+  }
 };
 
 export default Portfolio;
