@@ -63,7 +63,7 @@
     }
 
     .ContactInputs {
-        @apply w-[100%] rounded h-10 pl-3
+        @apply w-full rounded h-10 pl-3 max-w-[900px]
     }
 
     @layer base {

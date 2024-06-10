@@ -58,7 +58,7 @@ const Contact: NextPage = () => {
           Desperte sua próxima ideia incrivel e transforme projetos em
           realidade!
         </h2>
-        <form onSubmit={sendEmail} className="flexCol justify-center gap-5 w-[100%]">
+        <form onSubmit={sendEmail} className="flexCol justify-center gap-5 w-full max-w-[900px]">
           <input
             type="text"
             placeholder="Digite seu nome"
@@ -84,8 +84,9 @@ const Contact: NextPage = () => {
             placeholder="Digite sua mensagem..."
             onChange={(e) => setMessage(e.target.value)}
             value={message}
+            className="h-28 w-[100%] rounded pt-5 pl-3"
           ></textarea>
-          <input type="submit" value="Enviar" className="cursor-pointer" />
+          <input type="submit" value="Enviar" className=" mb-5 font-black h-10 rounded cursor-pointer bg-primary text-textD w-full max-w-[900px]" />
         </form>
         <section className="flex flex-row gap-4 lg:gap-5 2xl:gap-8">
           <Link
