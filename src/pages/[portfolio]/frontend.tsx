@@ -37,9 +37,9 @@ const FrontEnd: NextPage<CardsProps> = ({ cards }: CardsProps) => {
 
   const searchLowerCase = search.toLowerCase();
 
-  const filterProjects = cards.filter((project) =>
+  const filterProjects = Array.isArray(cards) ? cards.filter((project) =>
     project.title.toLowerCase().includes(searchLowerCase)
-  );
+  ) : [];
 
   return (
     <>
