@@ -84,7 +84,7 @@ const Contact: NextPage = () => {
             placeholder="Digite sua mensagem..."
             onChange={(e) => setMessage(e.target.value)}
             value={message}
-            className="h-28 w-[100%] rounded pt-5 pl-3"
+            className="h-28 w-[100%] rounded pt-5 pl-3 bg-textD"
           ></textarea>
           <input type="submit" value="Enviar" className=" mb-5 font-black h-10 rounded cursor-pointer bg-primary text-textD w-full max-w-[900px]" />
         </form>

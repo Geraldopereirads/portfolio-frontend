@@ -47,7 +47,7 @@
     }
 
     .paragraph {
-        @apply font-medium sm:text-lg lg:text-lg
+        @apply w-full font-medium sm:text-lg lg:text-lg
     }
 
     .buttonsPortfolio {
@@ -59,11 +59,11 @@
     }
 
     .flexTools {
-        @apply flex flex-wrap justify-center items-center gap-3 pt-5 lg:max-w-[80%] xl:max-w-[50%]
+        @apply flex flex-wrap justify-center items-center gap-3 pt-5 lg:max-w-full
     }
 
     .ContactInputs {
-        @apply w-full rounded h-10 pl-3 max-w-[900px]
+        @apply w-full rounded h-10 pl-3 max-w-[900px] bg-textD
     }
 
     @layer base {
