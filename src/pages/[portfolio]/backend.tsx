@@ -110,7 +110,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: { cards: response.data },
-    revalidate: 60,
+    revalidate: 60 * 15,
   };
 };
 
