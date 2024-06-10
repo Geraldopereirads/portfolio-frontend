@@ -70,7 +70,7 @@ const BackEnd: NextPage<CardsProps> = ({ cards }: CardsProps) => {
             type="search"
             value={search}
             onChange={handleSearchChange}
-            placeholder="Insira o título do projeto que você está buscando"
+            placeholder="Insira o título do projeto"
           />
         </form>
 
