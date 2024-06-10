@@ -16,6 +16,7 @@ const config: Config = {
         textD: "#1B1B1B",
       },
       screens: {
+        "minOne": "400px",
         "p": "500px",
         "pp": "600px",
       },

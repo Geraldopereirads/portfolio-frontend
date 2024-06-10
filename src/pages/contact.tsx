@@ -53,10 +53,11 @@ const Contact: NextPage = () => {
       <Header />
       <main className="flexCol">
         <h1 className="primaryTitle">Contato</h1>
-        <p>
+        <h2 className="w-[72%] pt-8
+         flex justify-center items-center font-semibold text-base minOne:w-[53%] p:w-[50%] p:text-lg pp:w-[100%] md:text-2xl lg:text-[29px]">
           Desperte sua próxima ideia incrivel e transforme projetos em
           realidade!
-        </p>
+        </h2>
         <form onSubmit={sendEmail}>
           <input
             type="text"
