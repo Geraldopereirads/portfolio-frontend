@@ -66,7 +66,7 @@ const Projects: NextPage<CardsProps> = ({ cards }: CardsProps) => {
 
         <form>
           <input
-            className="h-11 bg-textD rounded-lg pl-5 w-[100%] mb-12 text-textWhite"
+            className="h-11 bg-textD rounded-lg pl-5 w-[100%] mb-12 text-textWhite p:w-[437px]"
             type="search"
             value={search}
             onChange={handleSearchChange}
