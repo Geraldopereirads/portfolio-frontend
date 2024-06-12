@@ -8,7 +8,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { register } from "swiper/element/bundle";
-import { Roboto } from "next/font/google";
 
 register();
 
