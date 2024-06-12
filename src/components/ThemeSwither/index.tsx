@@ -6,11 +6,11 @@ const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-      {theme === "dark" ? (
-        <MdLightMode  className="iconsSize hover"/>
-      ) : (
+    <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+      {theme === "light" ? (
         <MdDarkMode className="iconsSize hover"/>
+      ) : (
+        <MdLightMode  className="iconsSize hover"/>
       )}
     </button>
   );
