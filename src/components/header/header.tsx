@@ -4,7 +4,7 @@ import { MdClose } from "react-icons/md";
 import { RiMenuAddLine } from "react-icons/ri";
 import { BsWhatsapp } from "react-icons/bs";
 import { BiSolidFilePdf } from "react-icons/bi";
-import { GrGithub, GrLinkedinOption } from "react-icons/gr";
+import { GrGithub, GrLinkedinOption, GrInstagram } from "react-icons/gr";
 import ThemeSwitcher from "../ThemeSwither";
 
 const Header = () => {
@@ -61,6 +61,14 @@ const Header = () => {
       </div>
 
       <section className="flex flex-row gap-4 lg:gap-5 2xl:gap-8">
+        <Link
+          href="https://www.instagram.com/geraldopereiradsj/"
+          title="WhatsApp"
+          target="_blank"
+        >
+          <GrInstagram className="iconsSize hover" />
+        </Link>
+
         <Link
           href="https://wa.me/5522997773136"
           title="WhatsApp"
