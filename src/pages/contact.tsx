@@ -3,11 +3,10 @@ import { NextPage } from "next";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
-import ThemeSwitcher from "@/components/ThemeSwither";
 import Link from "next/link";
 import { BiSolidFilePdf } from "react-icons/bi";
 import { BsWhatsapp } from "react-icons/bs";
-import { GrGithub, GrLinkedinOption } from "react-icons/gr";
+import { GrGithub, GrLinkedinOption, GrInstagram } from "react-icons/gr";
 
 const Contact: NextPage = () => {
   const [name, setName] = useState("");
@@ -53,12 +52,17 @@ const Contact: NextPage = () => {
       <Header />
       <main className="flexCol">
         <h1 className="primaryTitle">Contato</h1>
-        <h2 className="w-[72%] pt-20
-         flex justify-center items-center font-semibold text-base minOne:w-[53%] p:w-[50%] p:text-lg pp:w-[100%] md:text-2xl lg:text-[29px]">
+        <h2
+          className="w-[72%] pt-20
+         flex justify-center items-center font-semibold text-base minOne:w-[53%] p:w-[50%] p:text-lg pp:w-[100%] md:text-2xl lg:text-[29px]"
+        >
           Desperte sua próxima ideia incrivel e transforme projetos em
           realidade!
         </h2>
-        <form onSubmit={sendEmail} className="flexCol justify-center gap-5 w-full max-w-[900px]">
+        <form
+          onSubmit={sendEmail}
+          className="flexCol justify-center gap-5 w-full max-w-[900px]"
+        >
           <input
             type="text"
             placeholder="Digite seu nome"
@@ -86,9 +90,21 @@ const Contact: NextPage = () => {
             value={message}
             className="h-28 w-[100%] rounded pt-5 pl-3 bg-textD"
           ></textarea>
-          <input type="submit" value="Enviar" className=" mb-5 font-black h-10 rounded cursor-pointer bg-primary text-textD w-full max-w-[900px]" />
+          <input
+            type="submit"
+            value="Enviar"
+            className=" mb-5 font-black h-10 rounded cursor-pointer bg-primary text-textD w-full max-w-[900px]"
+          />
         </form>
         <section className="flex flex-row gap-4 lg:gap-5 2xl:gap-8">
+          <Link
+            href="https://www.instagram.com/geraldopereiradsj/"
+            title="WhatsApp"
+            target="_blank"
+          >
+            <GrInstagram className="iconsSize hover" />
+          </Link>
+
           <Link
             href="https://wa.me/5522997773136"
             title="WhatsApp"
