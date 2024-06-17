@@ -37,9 +37,11 @@ const FullStack: NextPage<CardsProps> = ({ cards }: CardsProps) => {
 
   const searchLowerCase = search.toLowerCase();
 
-  const filterProjects = Array.isArray(cards) ? cards.filter((project) =>
-    project.title.toLowerCase().includes(searchLowerCase)
-  ) : [];
+  const filterProjects = Array.isArray(cards)
+    ? cards.filter((project) =>
+        project.title.toLowerCase().includes(searchLowerCase)
+      )
+    : [];
 
   return (
     <>
@@ -77,7 +79,6 @@ const FullStack: NextPage<CardsProps> = ({ cards }: CardsProps) => {
           <Swiper
             slidesPerView={slidePerView}
             pagination={{ clickable: true }}
-            navigation
             loop={true}
           >
             {filterProjects.map((project) => (
@@ -88,7 +89,7 @@ const FullStack: NextPage<CardsProps> = ({ cards }: CardsProps) => {
           </Swiper>
         </ul>
 
-        <ul className="space mb-16 hidden md:grid gap-10 grid-cols-2 xl:grid-cols-3 xl: 2xl:grid-cols-4 2xl:gap-28 sm:hidden">
+        <ul className="space mb-16 hidden md:grid gap-10 grid-cols-2 xl:grid-cols-3 xl: 2xl:grid-cols-4 2xl:gap- sm:hidden">
           {filterProjects.map((project) => (
             <Card key={project.id} card={project} />
           ))}

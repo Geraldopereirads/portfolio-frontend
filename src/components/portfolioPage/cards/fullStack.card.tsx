@@ -20,6 +20,7 @@ const Card = ({ card }: CardProps) => {
           height={200}
           src={card.image}
           alt="Capa dos projetos FullStack"
+          className="rounded-[20px]"
         />
       </Link>
     </li>

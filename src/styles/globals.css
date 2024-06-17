@@ -51,7 +51,7 @@
     }
 
     .buttonsPortfolio {
-        @apply bg-gradient-to-t from-yellow-400 to-textD text-textD p-2 rounded-lg font-medium
+        @apply bg-primary text-textD p-2 rounded-lg font-bold
     }
 
     .tools {

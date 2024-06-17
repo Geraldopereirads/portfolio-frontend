@@ -23,6 +23,7 @@ const Card = ({ card }: CardProps) => {
           height={300}
           src={card.image}
           alt="Capa do projeto frontend"
+          className="rounded-[20px]"
         />
       </Link>
     </li>

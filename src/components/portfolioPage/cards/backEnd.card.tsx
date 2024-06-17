@@ -14,12 +14,14 @@ const Card = ({ card }: CardProps) => {
           <FaGithub size={25} />
         </Link>
       </div>
-      <Link href={card.url} target="_blank">
+      <Link href={card.url} target="_blank" >
         <Image
           width={300}
           height={300}
           src={card.image}
           alt="Capa do projeto backend"
+          className="rounded-[20px]"
+          
         />
       </Link>
     </li>
