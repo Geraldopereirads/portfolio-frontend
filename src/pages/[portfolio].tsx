@@ -88,7 +88,7 @@ const Portfolio: NextPage<CardsProps> = ({ cards }: CardsProps) => {
           </Swiper>
         </ul>
 
-        <ul className="space mb-16 hidden md:grid gap-10 grid-cols-2 xl:grid-cols-3 xl: 2xl:grid-cols-4 2xl:gap-28 sm:hidden">
+        <ul className="space mb-16 hidden md:grid gap-10 grid-cols-2 xl:grid-cols-3 xl: 2xl:grid-cols-4 2xl:gap- sm:hidden">
           {filterProjects.map((project) => (
             <Card key={project.id} card={project} />
           ))}
