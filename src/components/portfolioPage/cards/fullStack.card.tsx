@@ -7,7 +7,7 @@ const Card = ({ card }: CardProps) => {
   return (
     <li className=" flex flex-col justify-center items-center gap-2">
       <Link className="text text-2xl" href={card.url} target="_blank">
-        Portfólio Full-Stack
+        {card.title}
       </Link>
       <div className="flex justify-center items-center gap-5">
         <Link href={card.github} target="_blank">
