@@ -7,6 +7,7 @@ import Link from "next/link";
 import { BiSolidFilePdf } from "react-icons/bi";
 import { BsWhatsapp } from "react-icons/bs";
 import { GrGithub, GrLinkedinOption, GrInstagram } from "react-icons/gr";
+import { MdOutlineMarkEmailRead } from "react-icons/md";
 
 const Contact: NextPage = () => {
   const [name, setName] = useState("");
@@ -134,6 +135,33 @@ const Contact: NextPage = () => {
             <BiSolidFilePdf className="iconsSize text-textD dark:text-textWhite" />
           </Link>
         </section>
+        <div className="flex flex-col justify-center gap-2 font-bold text-lg">
+          <span className="flex flex-row pt-10 gap-2">
+            <Link href="https://wa.me/5522997773136" target="_blank">
+              <BsWhatsapp
+                size={20}
+                className="iconsSize text-textD dark:text-textWhite"
+              />
+            </Link>
+            22 9 9777-3136
+          </span>
+          <span className="flex flex-row gap-2">
+            <MdOutlineMarkEmailRead size={20} /> geraldo.pereirads@hotmail.com
+          </span>
+          <span className="flex flex-row gap-2">
+            <Link
+              href="https://www.linkedin.com/in/geraldo-pereira/"
+              title="LinkeDin"
+              target="_blank"
+            >
+              <GrLinkedinOption
+                className="iconsSize text-textD dark:text-textWhite"
+                size={20}
+              />
+            </Link>
+            linkedin.com/in/geraldo-pereira
+          </span>
+        </div>
       </main>
     </>
   );
