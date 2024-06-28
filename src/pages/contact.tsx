@@ -62,7 +62,7 @@ const Contact: NextPage = () => {
         </h2>
         <form
           onSubmit={sendEmail}
-          className="flexCol justify-center gap-5 w-full max-w-[900px]"
+          className="flexCol justify-center gap-5 w-full max-w-[900px] text-textWhite"
         >
           <input
             type="text"
