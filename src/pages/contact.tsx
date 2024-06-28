@@ -102,7 +102,7 @@ const Contact: NextPage = () => {
             title="WhatsApp"
             target="_blank"
           >
-            <GrInstagram className="iconsSize hover" />
+            <GrInstagram className="iconsSize text-textD dark:text-textWhite" />
           </Link>
 
           <Link
