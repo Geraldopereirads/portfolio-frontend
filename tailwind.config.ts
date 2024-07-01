@@ -19,6 +19,7 @@ const config: Config = {
         "minOne": "400px",
         "p": "500px",
         "pp": "600px",
+        "m": "900px"
       },
       maxWidth: {
         "51": "51%",
