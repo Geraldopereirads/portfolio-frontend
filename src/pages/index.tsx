@@ -10,7 +10,7 @@ const Home: NextPage = () => {
       <Header />
       <main className="flex flex-col items-center justify-evenly text sm:flexRow sm:gap-12">
         <div className="flex flex-col gap-3">
-          <h1 className="text text-3xl leading-[137%] max-w-[51%] minOne:max-w-[100%] p:text-4xl p:leading-[114%] p:max-w-[100%] pp:max-w-[73%] sm:text-[2.063rem] lg:leading-[100%] lg:max-w-[60%] lg:text-5xl xl:text-5xl xl:max-w-[70%] 2xl:max-w-[25%] 2xl:leading-[120%]">
+          <h1 className="text text-3xl leading-[137%] max-w-[51%] minOne:max-w-[100%] p:text-4xl p:leading-[114%] p:max-w-[100%] pp:max-w-[73%] sm:text-[2.063rem] lg:leading-[100%] lg:max-w-[60%] lg:text-5xl xl:text-5xl xl:max-w-[70%] 2xl:max-w-[50%] 2xl:leading-[120%]">
             <small className="textSmall">Olá</small> <br />
             Eu sou Geraldo Pereira, Desenvolvedor Full-Stack
           </h1>
